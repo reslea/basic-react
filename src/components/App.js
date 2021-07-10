@@ -14,12 +14,8 @@ function App() {
     <Router>      
       <nav>
         <ul>
-          <li>
-            <Link to='/'>Tasks</Link>
-          </li>
-          <li>
-            <Link to='/counter'>Counter</Link>
-          </li>
+          <li><Link to='/'>Tasks</Link></li>
+          <li><Link to='/counter'>Counter</Link></li>
         </ul>
       </nav>
       <Switch>
