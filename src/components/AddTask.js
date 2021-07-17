@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { addTask } from '../reducers/tasksReducer';
+import { TasksDispatchContext } from '../contexts/tasksContext';
 
-function AddTask({ addTask }) {
+function AddTask() {
   const [text, setText] = useState('');
+  const tasksDispatch = useContext(TasksDispatchContext);
 
   function onAdd() {
     setText('');
-    addTask(text);
+    tasksDispatch(addTask(text));
   }
   
   return (

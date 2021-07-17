@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TasksContext } from '../contexts/tasksContext';
 import Task from './Task';
 
-function TaskList({ tasks, toggleTask }) {
+function TaskList() {
+  const { tasks } = useContext(TasksContext);
+
   return (    
   <ul>
     {tasks.map(t => (
     <li key={t.id}>
-      <Task task={t} toggle={toggleTask} />
+      <Task task={t} />
     </li>))}
   </ul>
   )
